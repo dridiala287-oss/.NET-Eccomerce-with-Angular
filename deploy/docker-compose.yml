@@ -41,6 +41,7 @@ services:
       ConnectionStrings__DefaultConnection: "Server=sql,1433;Database=skinet;User Id=SA;Password=${MSSQL_SA_PASSWORD};TrustServerCertificate=True"
       ConnectionStrings__Redis: "redis:6379"
       StripeSettings__WhSecret: ${STRIPE_WEBHOOK_SECRET}
+      StripeSettings__SecretKey: ${STRIPE_SECRET_KEY}
     volumes:
       - api-keys:/root/.aspnet/DataProtection-Keys
     expose:
